@@ -1,0 +1,151 @@
+---
+import { Image } from 'astro:assets';
+import test4 from '../images/test4.svg';
+import pic01 from '../images/pic01.jpg';
+import pic02 from '../images/pic02.jpg';
+import pic03 from '../images/pic03.jpg';
+import pic04 from '../images/pic04.jpg';
+import pic05 from '../images/pic05.jpg';
+import green_Star from '../images/green_star.svg';
+import empty_Star from '../images/empty_star.svg';
+---
+
+<div class="w-full max-w-none overflow-x-clip pl-[clamp(20px,6vw,110px)] mt-16 md:mt-0  "> 
+  <div class="flex w-full max-w-full flex-col overflow-hidden font-stretchPro text-[clamp(30px,7vw,190px)] uppercase leading-[0.95] pointer-events-none">
+    
+    <div class="flex w-full items-end justify- gap-4 select-none">
+      <div class="flex min-w-0 items-center">
+        <span class="bg-clip-text text-transparent gradient-work">VIDDEOO</span>
+
+        <div class="h-[clamp(26px,4vw,70px)] w-[clamp(90px,18vw,350px)] rounded-full border-[clamp(4px,0.6vw,8px)] border-[#f4f3cd] ml-[clamp(8px,1vw,18px)] translate-y-[0.12em]"></div>
+      </div>
+
+      <div class="hidden sm:flex shrink-0 items-center  ml-[clamp(20px,4vw,220px)]">
+        <Image
+          src={test4}
+          alt="Pen tool"
+          class="w-[clamp(180px,18vw,380px)] h-[clamp(180px,18vw,380px)] object-contain pointer-events-auto"
+        />
+      </div>
+    </div>
+
+    <div class="flex w-full min-w-0 items-center select-none">
+      <span class="bg-clip-text text-transparent gradient-work">TESTIMOONIALS</span>
+    </div>
+  </div>
+
+  <div class="flex w-full min-w-0 flex-col lg:flex-row gap-[clamp(40px,5vw,110px)] mt-[clamp(50px,6vw,110px)] font-glancyrRegular">
+    
+    <div class="w-full lg:w-[40%] min-w-0 flex flex-col text-white pt-[clamp(16px,2vw,40px)]">
+      <div class="flex items-center gap-[clamp(14px,1.5vw,24px)] mb-[clamp(28px,3vw,50px)]">
+        <Image
+          src={pic01}
+          alt="Mark Johnson"
+          class="w-[clamp(64px,5vw,100px)] h-[clamp(64px,5vw,100px)] rounded-full object-cover"
+        />
+
+        <div class="flex min-w-0 flex-col leading-tight gap-1">
+          <span class="font-bold text-[clamp(18px,1.6vw,32px)] uppercase tracking-wide">
+            Mark Johnson
+          </span>
+          <span class="text-[clamp(15px,1.3vw,24px)] uppercase tracking-wider">
+            @MARKJOHNSON
+          </span>
+        </div>
+      </div>
+
+      <p class="text-[clamp(14px,1.3vw,32px)] mb-6 leading-[1.55] tracking-wide">
+        <span class="text-[#b3e823] font-bold">Lorem Ipsum</span> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since th
+      </p>
+
+      <p class="text-[clamp(14px,1.3vw,32px)] mb-6 leading-[1.55] tracking-wide">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been thetype and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+      </p>
+
+      <div class="flex gap-2">
+        <Image src={green_Star} alt="Green Star" class="w-[clamp(20px,1.5vw,32px)] h-[clamp(20px,1.5vw,32px)] object-contain" />
+        <Image src={green_Star} alt="Green Star" class="w-[clamp(20px,1.5vw,32px)] h-[clamp(20px,1.5vw,32px)] object-contain" />
+        <Image src={green_Star} alt="Green Star" class="w-[clamp(20px,1.5vw,32px)] h-[clamp(20px,1.5vw,32px)] object-contain" />
+        <Image src={green_Star} alt="Green Star" class="w-[clamp(20px,1.5vw,32px)] h-[clamp(20px,1.5vw,32px)] object-contain" />
+        <Image src={empty_Star} alt="Empty Star" class="w-[clamp(20px,1.5vw,32px)] h-[clamp(20px,1.5vw,32px)] object-contain" />
+      </div>
+    </div>
+
+    <div class="w-full lg:w-[60%] min-w-0 flex flex-col overflow-hidden relative select-none">
+      <div
+        id="video-testimonials-carousel"
+        class="video-testimonials-carousel flex w-full min-w-0 snap-x snap-mandatory gap-[clamp(16px,2vw,32px)] overflow-x-auto pb-6"
+        style="scrollbar-width: none; -ms-overflow-style: none;"
+      >
+
+        <div class="video-carousel-slide relative w-[clamp(280px,32vw,620px)] h-[clamp(420px,34vw,700px)] shrink-0 snap-start rounded-3xl overflow-hidden border border-white/10 shadow-lg">
+          <Image src={pic02} alt="Video 1" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 z-50 flex items-center justify-center pointer-events-none">
+            <div class="flex items-center justify-center rounded-full border-[1.5px] border-white/60 bg-white/20 backdrop-blur-sm pl-[clamp(4px,0.4vw,8px)] w-[clamp(64px,5vw,96px)] h-[clamp(64px,5vw,96px)]">
+              <svg class="w-[clamp(26px,2.2vw,40px)] h-[clamp(26px,2.2vw,40px)] text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-carousel-slide relative w-[clamp(280px,32vw,620px)] h-[clamp(420px,34vw,700px)] shrink-0 snap-start rounded-3xl overflow-hidden border border-white/10 shadow-lg">
+          <Image src={pic03} alt="Video 2" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 z-50 flex items-center justify-center pointer-events-none">
+            <div class="flex items-center justify-center rounded-full border-[1.5px] border-white/60 bg-white/20 backdrop-blur-sm pl-[clamp(4px,0.4vw,8px)] w-[clamp(64px,5vw,96px)] h-[clamp(64px,5vw,96px)]">
+              <svg class="w-[clamp(26px,2.2vw,40px)] h-[clamp(26px,2.2vw,40px)] text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-carousel-slide relative w-[clamp(280px,32vw,620px)] h-[clamp(420px,34vw,700px)] shrink-0 snap-start rounded-3xl overflow-hidden border border-white/10 shadow-lg">
+          <Image src={pic04} alt="Video 3" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 z-50 flex items-center justify-center pointer-events-none">
+            <div class="flex items-center justify-center rounded-full border-[1.5px] border-white/60 bg-white/20 backdrop-blur-sm pl-[clamp(4px,0.4vw,8px)] w-[clamp(64px,5vw,96px)] h-[clamp(64px,5vw,96px)]">
+              <svg class="w-[clamp(26px,2.2vw,40px)] h-[clamp(26px,2.2vw,40px)] text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-carousel-slide relative w-[clamp(280px,32vw,620px)] h-[clamp(420px,34vw,700px)] shrink-0 snap-start rounded-3xl overflow-hidden border border-white/10 shadow-lg">
+          <Image src={pic05} alt="Video 4" class="w-full h-full object-cover" />
+          <div class="absolute inset-0 z-50 flex items-center justify-center pointer-events-none">
+            <div class="flex items-center justify-center rounded-full border-[1.5px] border-white/60 bg-white/20 backdrop-blur-sm pl-[clamp(4px,0.4vw,8px)] w-[clamp(64px,5vw,96px)] h-[clamp(64px,5vw,96px)]">
+              <svg class="w-[clamp(26px,2.2vw,40px)] h-[clamp(26px,2.2vw,40px)] text-white drop-shadow-md" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="video-testimonials-pagination-dots" class="flex items-center justify-center gap-3 mt-6 mb-4">
+        <button type="button" aria-label="Go to slide 1" class="video-carousel-dot h-[2px] w-9 bg-white rounded-full transition-all duration-300"></button>
+        <button type="button" aria-label="Go to slide 2" class="video-carousel-dot h-[2px] w-5 bg-gray-500 rounded-full transition-all duration-300"></button>
+        <button type="button" aria-label="Go to slide 3" class="video-carousel-dot h-[2px] w-5 bg-gray-500 rounded-full transition-all duration-300"></button>
+        <button type="button" aria-label="Go to slide 4" class="video-carousel-dot h-[2px] w-5 bg-gray-500 rounded-full transition-all duration-300"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="h-auto relative  z-10 mt-[clamp(80px,8vw,160px)] px-6 sm:px-12  mb-[clamp(60px,6vw,120px)]">
+  <div class="bg-border-white h-[1px]"></div>
+</div>
+
+<style>
+    #video-testimonials-carousel::-webkit-scrollbar {
+        display: none;
+    }
+</style>
+
+<script>
+    import { initVideoTestimonialsCarousel } from "./video-testimonials-carousel";
+
+    initVideoTestimonialsCarousel();
+</script>

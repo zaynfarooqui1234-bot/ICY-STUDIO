@@ -1,0 +1,68 @@
+---
+import work2 from "../images/work2.svg";
+import work3 from "../images/work3.svg";
+import work4 from "../images/work4.svg";
+import work5 from "../images/work5.svg";
+import work6 from "../images/work6.svg";
+import work7 from "../images/work7.svg";
+---
+
+<section class="bg-[#070707] px-4 pb-12 sm:px-8 sm:pb-20 mt-24 overflow-hidden">
+  <div class="mx-auto grid w-full grid-cols-1 gap-4 lg:grid-cols-2">
+
+    <article class="relative w-full">
+  <img
+    src={work2.src}
+    alt=""
+    aria-hidden="true"
+    class="block w-full h-auto"
+  />
+
+  <div class="absolute inset-0 z-10">
+    <h2
+      class="absolute left-[5%] top-[16%] font-glancyrRegular text-[clamp(52px,7.1vw,170px)] md:text-[110px] lg:text-[clamp(52px,7.1vw,170px)] leading-[1.18] tracking-tight text-[#070707]"
+    >
+      OUR<br />BEST<br />WORKS
+    </h2>
+
+    <img
+      src={work3.src}
+      alt=""
+      class="absolute left-[50%] top-[10%] w-[clamp(230px,24vw,580px)] md:w-[400px] lg:w-[clamp(230px,24vw,580px)] h-auto z-20 pointer-events-none"
+    />
+
+    <img
+      src={work4.src}
+      alt=""
+      aria-hidden="true"
+      class="absolute left-[5%] bottom-[19%] h-[2px] w-[90%] object-cover bg-black"
+    />
+
+    <img
+      src={work5.src}
+      alt=""
+      aria-hidden="true"
+      class="absolute right-[5%] bottom-[7%] w-[clamp(22px,2vw,38px)] h-auto"
+    />
+  </div>
+</article>
+
+    <article class="relative w-full">
+      <img
+        src={work6.src}
+        alt=""
+        aria-hidden="true"
+        class="w-full h-auto block"
+      />
+
+      <div class="absolute inset-0 z-10 flex items-center justify-center p-[6%]">
+        <img
+          src={work7.src}
+          alt="Work showcase illustration"
+          class="w-[85%] h-auto object-contain"
+        />
+      </div>
+    </article>
+
+  </div>
+</section>

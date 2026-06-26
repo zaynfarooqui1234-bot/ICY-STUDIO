@@ -1,0 +1,179 @@
+---
+import 'animate.css';
+import '../assets/css/main.css';
+
+
+
+
+// import { ViewTransitions } from 'astro:transitions';
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preload" href="src/assets/css/stretchpro-webfont.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="src/assets/css/glancyr-glancyr-light-200-webfont.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="src/assets/css/glancyr-glancyr-extra-light-100-webfont.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="src/assets/css/glancyr-glancyr-light-italic-200-webfont.woff2" as="font" crossorigin="anonymous" />
+		<link rel="preload" href="src/images/reduced/5-(WHITE).png" as="image" crossorigin="anonymous" />
+		<link rel="preload" href="src/images/reduced/ICY-LOGO-WITHOUT-TAGLINE.png" as="image" crossorigin="anonymous" />
+		<link rel="preload" href="src/images/reduced/ICY-LOGO-WITH-TAGLINE.png" as="image" crossorigin="anonymous" />
+		<link rel="preload" href="src/images/reduced/53(WHITE).png" as="image" crossorigin="anonymous" />
+		<link href="https://fonts.cdnfonts.com/css/stretch-pro" rel="stylesheet">
+		<script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+                
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<!-- <ViewTransitions fallback="swap" /> -->
+	</head>
+	<body >
+				<div id="cursor" class="sm:block hidden"></div>
+				<div id="cursor-border" class="sm:block hidden" ></div>
+            <!--Content -->
+                <slot></slot>
+
+
+	</body>
+</html>
+
+<style is:global>
+	@tailwind base;
+	@tailwind components;
+	@tailwind utilities;
+	
+	:root {
+		--accent: 136, 58, 234;
+		--accent-light: 224, 204, 250;
+		--accent-dark: 49, 10, 101;
+		--accent-gradient: linear-gradient(
+			45deg,
+			rgb(var(--accent)),
+			rgb(var(--accent-light)) 30%,
+			white 60%
+		);
+		--blush-red: #ee4140;
+		--neon-green: #b3e823;
+  		--purple: #8f7cff;
+  		--white: #f7f7f7;
+		--background: #070707;
+	}
+	
+	html {
+		font-family: system-ui, sans-serif;
+		background: var(--background);
+		background-size: 224px;
+	}
+
+	#cursor {
+  position: fixed;
+  top: -5px;
+  left: -5px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#cursor-border {
+  --size: 50px;
+  position: fixed;
+  top: calc(var(--size) / -2);
+  left: calc(var(--size) / -2);
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px white;
+  pointer-events: none;
+  transition: top 0.15s ease-out, left 0.15s ease-out, width 0.15s ease-out,
+  height 0.15s ease-out, background-color 0.15s ease-out;
+  z-index: 999;
+}
+	
+</style>
+
+<script>
+	import Lenis from '@studio-freight/lenis';
+
+	const lenis = new Lenis()
+
+	function raf(time: number) {
+	lenis.raf(time)
+	requestAnimationFrame(raf)
+	}
+
+	requestAnimationFrame(raf)
+
+// Circle follow cursor movements
+
+const cursor = document.querySelector<HTMLElement>("#cursor");
+const cursorBorder = document.querySelector<HTMLElement>("#cursor-border");
+const cursorPos = { x: 0, y: 0 };
+const cursorBorderPos = { x: 0, y: 0 };
+
+document.addEventListener("mousemove", (e) => {
+  cursorPos.x = e.clientX;
+  cursorPos.y = e.clientY;
+
+if (cursor) {
+	cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+}
+});
+
+function loop() {
+  const easting = 8;
+  cursorBorderPos.x += (cursorPos.x - cursorBorderPos.x) / easting;
+  cursorBorderPos.y += (cursorPos.y - cursorBorderPos.y) / easting;
+
+if (cursorBorder) {
+	cursorBorder.style.transform = `translate(${cursorBorderPos.x}px, ${cursorBorderPos.y}px)`;
+}
+  requestAnimationFrame(loop);
+}
+
+requestAnimationFrame(loop);
+
+document.querySelectorAll<HTMLElement>("[data-cursor]").forEach((item) => {
+  item.addEventListener("mouseover", (e) => {
+	if (cursorBorder) {
+		if (item.dataset.cursor === "pointer") {
+		cursorBorder.style.backgroundColor = "black";
+		cursorBorder.style.mixBlendMode = "difference";
+			if (cursor) {
+				cursor.style.backgroundColor = "black";
+			}
+			
+    }
+    if (item.dataset.cursor === "pointer2") {
+      cursorBorder.style.backgroundColor = "white";
+      cursorBorder.style.mixBlendMode = "difference";
+      cursorBorder.style.setProperty("--size", "80px");
+    }
+  item.addEventListener("mouseout", (e) => {
+    cursorBorder.style.backgroundColor = "unset";
+    cursorBorder.style.mixBlendMode = "unset";
+    cursorBorder.style.setProperty("--size", "50px");
+	if (cursor ) {
+		cursor.style.backgroundColor = "white";
+	}
+  });
+} 
+});   
+});
+
+
+
+
+</script>
+
+

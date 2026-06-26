@@ -1,0 +1,40 @@
+---
+
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro'; 
+import Work from '../components/Work.astro';
+import Services from '../components/ServicesComp.astro';
+import Testimonials from '../components/Testimonials.astro';
+import { Navbar } from '../components/Navbar.tsx';
+import { FooterComp } from '../components/FooterComp.tsx';
+
+
+---
+
+<Layout title="Icy Studio">
+
+	<!-- Navbar -->
+		<Navbar white client:load />
+
+	<!-- Hero -->
+		<Hero />
+
+	<!-- Work -->
+		<Work />
+
+	<!-- Services -->
+		<Services />
+
+	<!-- Testimonials -->
+		<Testimonials />
+
+	<!-- Footer -->
+		<FooterComp client:load />
+
+</Layout>
+
+
+<style>
+
+
+</style>

@@ -1,0 +1,98 @@
+---
+import { Image } from "astro:assets";
+import test3 from "../images/test3.svg";
+import ReviewCard from "./ReviewCard.astro";
+---
+
+<section
+  class="relative w-full max-w-none overflow-hidden pl-[clamp(20px,6vw,110px)] py-[clamp(40px,6vw,90px)] select-none"
+>
+  <div class="relative w-full min-h-[clamp(760px,165vw,920px)] sm:min-h-[clamp(520px,58vw,1300px)]">
+    <h2
+      class="pointer-events-none relative z-40 font-stretchPro text-[clamp(30px,7vw,190px)] uppercase leading-[0.9] bg-clip-text text-transparent gradient-work"
+    >
+      USSER <br />
+      REVIEEWS
+    </h2>
+
+    <!-- Cards carousel -->
+
+    <div class="absolute left-0 right-0 lg:top-[clamp(120px,13vw,330px)] z-30 sm:z-10">
+      <div
+        id="reviews-carousel"
+        class="reviews-carousel flex w-full max-w-full snap-x snap-mandatory items-stretch gap-6 overflow-x-auto pb-2 pr-6"
+        style="scrollbar-width: none; -ms-overflow-style: none;"
+      >
+        <div class="reviews-carousel-slide shrink-0 snap-start">
+          <ReviewCard />
+        </div>
+        <div class="reviews-carousel-slide shrink-0 snap-start">
+          <ReviewCard transparent={true} />
+        </div>
+        <div class="reviews-carousel-slide shrink-0 snap-start">
+          <ReviewCard />
+        </div>
+        <div class="reviews-carousel-slide shrink-0 snap-start">
+          <ReviewCard transparent />
+        </div>
+      </div>
+
+      <div
+        id="reviews-pagination-dots"
+        class="relative z-30 mt-[clamp(20px,3vw,48px)] flex items-center justify-start gap-3 pointer-events-auto"
+      >
+        <button
+          type="button"
+          aria-label="Go to slide 1"
+          class="reviews-carousel-dot h-[2px] w-9 rounded-full bg-white transition-all duration-300"
+        ></button>
+        <button
+          type="button"
+          aria-label="Go to slide 2"
+          class="reviews-carousel-dot h-[2px] w-5 rounded-full bg-gray-500 transition-all duration-300"
+        ></button>
+        <button
+          type="button"
+          aria-label="Go to slide 3"
+          class="reviews-carousel-dot h-[2px] w-5 rounded-full bg-gray-500 transition-all duration-300"
+        ></button>
+        <button
+          type="button"
+          aria-label="Go to slide 4"
+          class="reviews-carousel-dot h-[2px] w-5 rounded-full bg-gray-500 transition-all duration-300"
+        ></button>
+      </div>
+    </div>
+
+    <!-- Glow + illustration -->
+    <div
+      class="pointer-events-none absolute right-0 top-[clamp(430px,95vw,560px)] z-20 overflow-visible sm:top-[clamp(55px,5vw,130px)]"
+    >
+      <div class="absolute inset-0 z-10 bg-[#070707]"></div>
+      <div
+        class="absolute right-[5%] top-1/2 z-[15] h-[clamp(420px,50vw,850px)] w-[clamp(350px,35vw,800px)] -translate-y-1/2 rounded-[30px] opacity-70 blur-[clamp(70px,7vw,120px)] pointer-events-none"
+        style="background: radial-gradient(166.67% 50% at 50% 50%, #B3E823 0%, rgba(179, 232, 35, 0) 100%);"
+        aria-hidden="true"
+      >
+      </div>
+
+      <Image
+        src={test3}
+        alt="User Reviews"
+        class="relative z-20 max-h-none w-[clamp(350px,46vw,1200px)] max-w-none right-0 object-contain -translate-x-[2%]"
+      />
+    </div>
+  </div>
+</section>
+
+<style>
+  #reviews-carousel::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+<script>
+  import { initReviewsCarousel } from "./reviews-carousel";
+
+  initReviewsCarousel();
+</script>

@@ -1,0 +1,83 @@
+---
+import { WebIcon } from "./ServicesPageComp";
+import WorkEndSVG from "./WorkEndSVG.astro";
+import { CategoriesNav } from "../components/CategoriesNav.tsx";
+import Frame from '../images/Frame.svg';
+import Frame2 from '../images/Frame2.svg';
+---
+<section class="relative z-0 w-full flex justify-center px-[clamp(16px,4vw,64px)] py-[clamp(40px,7vw,120px)] overflow-visible">
+
+
+    <img
+    src={Frame2.src}
+    alt=""
+    aria-hidden="true"
+    class="pointer-events-none select-none absolute z-0 left-[-1vw] top-1/2 -translate-y-1/2 w-[clamp(100px,12vw,300px)]"
+  />
+
+  <img
+    src={Frame.src}
+    alt=""
+    aria-hidden="true"
+   class="pointer-events-none select-none absolute z-10 right-[-1vw] bottom-[-2vw] w-[clamp(100px,19vw,600px)]"
+  />
+
+  <div
+    class="relative z-0 bg-black border-[3px] border-white ring-[3px] ring-white rounded-[clamp(42px,7vw,150px)] w-full max-w-[clamp(700px,80vw,1540px)] h-[clamp(620px,64vw,1200px)] flex flex-col overflow-visible"
+  >
+    <div class="sm:h-[clamp(300px,30vw,570px)] border-b-[3px] ring-[3px] ring-white rounded-[clamp(42px,7vw,150px)] border-white flex justify-center items-start overflow-visible relative">
+      <div class="hidden relative z-20 md:flex items-start justify-center gap-[clamp(4px,1vw,30px)] -translate-y-[clamp(30px,5vw,170px)]">
+        <WorkEndSVG />
+        <WorkEndSVG />
+        <WorkEndSVG />
+      </div>
+      <div class="md:hidden relative z-20 flex items-start justify-center gap-[clamp(8px,1vw,30px)] -translate-y-[clamp(30px,5vw,170px)]">
+        <WorkEndSVG />
+        <WorkEndSVG />
+      </div>
+    </div>
+
+    <div class="flex-1 flex flex-col justify-center items-center py-[clamp(28px,4vw,80px)] px-[clamp(24px,6vw,120px)] w-full select-none">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-y-[clamp(20px,3vw,48px)] gap-x-[clamp(40px,7vw,160px)] w-full max-w-[clamp(850px,70vw,1300px)] mb-[clamp(30px,3vw,90px)] md:mb-[clamp(8px,3vw,90px)]">
+        <div class="flex flex-col gap-[clamp(14px,1.5vw,28px)] items-start ">
+          <WebIcon text="BRAND-IDENTITY" />
+          <WebIcon text="SOCIAL-MEDIA " />
+          <WebIcon text="BROCHURES" />
+          <WebIcon text="AD-CREATIVES" />
+        </div>
+
+        <div class="flex flex-col gap-[clamp(14px,1.5vw,28px)] items-start">
+          <WebIcon text="LOGO'S" />
+          <WebIcon text="STATIONERY" />
+          <WebIcon text="POSTERS" />
+          <WebIcon text="VFX/SFX EDIT" />
+        </div>
+
+        <div class="hidden md:flex flex-col gap-[clamp(14px,1.5vw,28px)] items-start">
+          <WebIcon text="PACKAGING" />
+          <WebIcon text="BRAND GUIDES" />
+          <WebIcon text="ILLUSTRATIONS" />
+          <WebIcon text="MOTION-GRAPHICS" />
+        </div>
+      </div>
+
+      <div class="flex flex-col items-center gap-[clamp(8px,3vw,50px)]">
+        <h2 class="text-white text-[clamp(15px,2.4vw,48px)] font-glancyrThin uppercase tracking-widest whitespace-nowrap">
+          WE <span class="italic font-glancyrRegular">MAKE</span> DESIGN
+          <span class="text-[#b3e823] font-glancyrMedium normal-case">POP :)</span>
+        </h2>
+
+        <button class="btn border-none h-[clamp(50px,4vw,86px)] w-[clamp(200px,20vw,380px)] overflow-hidden text-[clamp(16px,1.5vw,28px)]">
+          <div class="btn__bg">
+            <span class="btn__bg__layer btn__bg__layer-first"></span>
+            <span class="btn__bg__layer btn__bg__layer-second"></span>
+            <span class="btn__bg__layer btn__bg__layer-third"></span>
+          </div>
+
+          <span class="btn__text-out text-white font-glancyrRegular box-shadow2 uppercase mt-1 tracking-wide">GET IN TOUCH!</span>
+          <span class="btn__text-in text-white font-glancyrRegular box-shadow2 uppercase mt-1 tracking-wide">GET IN TOUCH!</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>

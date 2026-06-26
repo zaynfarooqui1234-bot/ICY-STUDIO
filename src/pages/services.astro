@@ -1,0 +1,93 @@
+---
+
+import { Navbar } from "../components/Navbar.tsx"
+import Layout from "../layouts/Layout.astro"
+import { Image } from 'astro:assets';
+import { ServicesPageComp } from "../components/ServicesPageComp";
+import { Footer } from '../components/Footer.tsx'
+
+
+import globe from '../images/reduced/5-(WHITE).png';
+import arrow from '../images/arrow-scroll.png';
+import prism from '../images/15(WHITE).png';
+import wiredLineal12Layers from '../assets/videos/wired-lineal-12-layers.json?url';
+
+
+---
+
+<Layout title="Icy Studio">
+    <Navbar white client:load/>
+
+    <div class=" absolute px-5 pb-10 sm:px-16 sm:pb-0 sm:pt-32 flex flex-col  ">
+        <button class="w-[233px] h-[64px] pt-2 text-4xl rounded-full font-glancyrRegular bg-transparent outline outline-neon-green outline-1 text-white px-4 py-1">
+          SERVICES
+        </button>
+    </div>
+
+    <div class="relative flex items-center justify-center h-svh w-full flex-col  ">
+        <div class="h-auto w-full px-6 pb-4 pt-8 sm:px-0 sm:pb-0 flex flex-col ">
+                <div class=" h-auto flex flex-col justify-center">
+                    <div class=" relative h-auto flex justify-center sm:mb-8">
+                        <div class="text-5xl sm:text-[100px] flex w-full flex-col items-center  ">
+                            <div class=" relative flex w-full justify-start">
+                                <div class="flex items-center left-[29%] relative ">
+                                    <span class="absolute mt-4 right-[75%] opacity-10 text-neutral-50 
+                                    text-[150px] font-thin font-glancyrExtraThin ">RE</span>
+                                    <span class="  font-glancyrExtraThin z-10 text-5xl sm:text-[100px]">THINK</span>
+                                    <span class="absolute font-baileyRegular left-[82%] pb-10 z-0 text-neon-green text-5xl sm:text-[200px] ">
+                                        Brilliance.
+                                    </span>
+                                </div>
+                            </div>
+                            <div class=" flex gap-2 sm:gap-5 hero-line-1">
+                                <span class=" font-glancyrThin box-shadow3 ">DESIGNING</span> 
+                            </div>
+                            <div class="flex gap-4 items-start hero-line-1">
+                                <span class=" font-glancyrExtraThin box-shadow2">TOMORROW,</span> 
+                                <span class=" font-glancyrExtraThinItalic box-shadow2"><div data-cursor="pointer2" class="flex p-0 justify-center ">
+                                    <button class="btn bg-transparent h-20 w-60 text-5xl sm:h-32 sm:w-[381px] overflow-hidden sm:text-[100px]">
+                                        <div class="btn__bg bg-transparent ">
+                                            <span class="btn__bg__layer bg-transparent btn__bg__layer-first"></span>
+                                            <span class="btn__bg__layer bg-transparent btn__bg__layer-second"></span>
+                                            <span class="btn__bg__layer bg-transparent btn__bg__layer-third"></span>
+                                        </div>
+                                        <span class="btn__text-out text-white box-shadow2 ">Today!</span>
+                                        <span class="btn__text-in text-white box-shadow2">Today!</span>
+                                    </button>
+                                </div>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    
+    
+        <div class=" absolute w-full bottom-0 z-10  ">
+            <div class="flex text-xs sm:text-xl items-center justify-between px-6 sm:px-12  py-6">
+                <div class="flex items-center gap-2 sm:gap-12 ">
+                    <span class=" font-glancyrThin" > SERVICES</span> 
+                    <div class="flex items-center">
+                        <Image src={arrow} class=" size-4 sm:size-6" alt=""/>
+                        <span class=" font-glancyrRegular"> SCROLL </span> 
+                    </div>
+                </div>
+                <div>
+                    <dotlottie-player  src={wiredLineal12Layers} background="transparent" 
+                                speed="1" style="width: 100px; height:100px" loop autoplay></dotlottie-player>
+                </div>
+            </div>
+            <div class=" h-auto px-6 sm:px-12  relative z-10">
+                <div class=" bg-border-white h-[1px]">
+                </div>
+            </div>
+        </div>
+
+    </div> 
+
+    <ServicesPageComp client:load/>
+
+    <div class="w-[30%] pl-[91px] pb-28">
+        <Footer client:load noPadding />
+    </div>
+</Layout>

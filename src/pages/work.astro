@@ -1,0 +1,244 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Navbar } from "../components/Navbar.tsx";
+
+import arrow from "../images/arrow-scroll.png";
+import reviewClutch from "../images/review_clutch.svg";
+import workOne from "../images/work1.svg";
+import WorkPageComp from "../components/WorkPageComp.astro";
+import WorkTitleStrip from "../components/WorkTitleStrip.astro";
+import { CategoriesNav } from "../components/CategoriesNav.tsx";
+import WorkInfoSections from "../components/WorkInfoSections.astro";
+import WorkInfoBottomSection from "../components/WorkInfoBottomSection.astro";
+import WorkPrivacyPolicy from "../components/WorkPrivacyPolicy.astro";
+import WorkEndSplitSection from "../components/WorkEndSplitSection.astro";
+import { Footer } from "../components/Footer.tsx";
+---
+
+<Layout title="Icy Studio | Work">
+  <section class="relative h-svh bg-[#070707] text-white overflow-hidden">
+    <Navbar white client:load />
+
+    <div
+      class="absolute z-20 flex flex-col select-none px-[clamp(20px,4.4vw,64px)] pb-[clamp(24px,2.8vw,40px)] pt-[clamp(72px,8.9vw,128px)]"
+    >
+      <button
+        class="h-[clamp(42px,6.25vw,74px)] w-[clamp(118px,16.5vw,169px)] rounded-full bg-transparent px-[clamp(14px,1.6vw,24px)] py-1 pt-[clamp(4px,0.8vw,8px)] font-glancyrRegular text-[clamp(22px,3.5vw,36px)] leading-[120.29%] text-white outline outline-1 outline-[#b3e823] uppercase"
+      >
+        WORK
+      </button>
+    </div>
+
+    <div
+      class="relative flex items-center justify-center h-svh w-full flex-col"
+    >
+      <div class="h-auto w-full px-6 pb-4 pt-8 sm:px-0 sm:pb-0 flex flex-col">
+        <div
+          class="relative mx-auto mt-24 sm:mt-10 w-full max-w-[1150px] h-[476px] hidden xl:block"
+        >
+          <img
+            src={workOne.src}
+            alt=""
+            aria-hidden="true"
+            class="absolute left-[70px] top-[110px] w-[326px] h-[223px] object-contain pointer-events-none select-none"
+          />
+
+          <h1 class="absolute left-[117px] top-[74px] w-[585px] h-[138px] m-0">
+            <span
+              class="absolute left-0 -top-[15px] w-[119px] h-[138px] [font-family:'Edwardian_Script_ITC'] font-normal text-[130px] leading-none text-white [color:#FFFFFF] [-webkit-text-fill-color:#fff] [-webkit-text-stroke:5px_#070707] [paint-order:stroke_fill]"
+              >A</span
+            >
+            <span
+              class="absolute left-[132px] top-[5px] w-[453px] h-[106px] font-glancyrThin text-[100px] leading-[106%] text-white m-0 p-0"
+              >WESOME</span
+            >
+          </h1>
+
+          <h1
+            class="absolute left-[718px] top-[79px] w-[309px] h-[106px] font-glancyrItalic text-[100px] leading-[106%] text-[#b3e823] [-webkit-text-stroke:1px_#000000] m-0 p-0"
+          >
+            WORK
+          </h1>
+
+          <h1
+            class="absolute left-[156px] top-[166px] w-[165px] h-[106px] font-glancyrExtraThin text-[100px] leading-[106%] text-white m-0 p-0"
+          >
+            For
+          </h1>
+
+          <h1 class="absolute left-[321px] top-[169px] w-[585px] h-[138px] m-0">
+            <span
+              class="absolute left-0 -top-[15px] w-[119px] h-[138px] [font-family:'Edwardian_Script_ITC'] font-normal text-[130px] leading-none text-white [color:#FFFFFF] [-webkit-text-fill-color:#fff] [-webkit-text-stroke:5px_#070707] [paint-order:stroke_fill]"
+              >A</span
+            >
+            <span
+              class="absolute left-[132px] top-[5px] w-[453px] h-[106px] font-glancyrThin text-[100px] leading-[106%] text-white m-0 p-0"
+              >WESOME</span
+            >
+          </h1>
+
+          <div
+            data-cursor="pointer2"
+            class="absolute left-[873px] top-[166px] w-[277px] h-[122px] flex p-0 justify-center"
+          >
+            <button
+              class="btn border-none p-0 w-[277px] h-[122px] overflow-hidden text-[150px] leading-[106%]"
+            >
+              <div class="btn__bg">
+                <span class="btn__bg__layer btn__bg__layer-first"></span>
+                <span class="btn__bg__layer btn__bg__layer-second"></span>
+                <span class="btn__bg__layer btn__bg__layer-third"></span>
+              </div>
+              <span
+                class="btn__text-out font-baileyRegular text-white box-shadow2"
+                >People</span
+              >
+              <span
+                class="btn__text-in font-baileyRegular text-white box-shadow2"
+                >People</span
+              >
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="xl:hidden mt-[clamp(36px,11vw,72px)] flex w-full flex-col items-center gap-[clamp(2px,1.5vw,6px)] pt-[clamp(60px,18vw,110px)]"
+        >
+          <div
+            class="flex w-full flex-wrap items-end justify-center gap-[clamp(4px,1.6vw,10px)] text-center"
+          >
+           <span
+              class="[font-family:'Edwardian_Script_ITC'] font-normal text-[clamp(62px,19vw,96px)] leading-none  text-white [color:#FFFFFF] [-webkit-text-fill-color:#fff] [-webkit-text-stroke:clamp(2px,0.7vw,3px)_#070707] [paint-order:stroke_fill]"
+            >
+              A
+            </span>
+
+            <span
+              class="font-glancyrThin text-[clamp(42px,14vw,68px)] leading-[106%]"
+            >
+              WESOME
+            </span>
+
+            <span
+              class="font-glancyrItalic text-[clamp(42px,14vw,68px)] leading-[106%] text-[#b3e823] [-webkit-text-stroke:1px_#000000]"
+            >
+              WORK
+            </span>
+          </div>
+ <div
+              class="relative h-[clamp(54px,17vw,82px)] w-[clamp(92px,30vw,100px)]"
+            >
+              <img
+                src={workOne.src}
+                alt=""
+                aria-hidden="true"
+                class="absolute inset-0 h-full w-full object-contain pointer-events-none select-none"
+              />
+
+              <span
+                class="absolute left-0 top-[clamp(6px,2vw,12px)] font-glancyrExtraThin text-[clamp(40px,13vw,64px)] leading-[106%]"
+              >
+                For
+              </span>
+            </div>
+          <div
+            class="flex w-full flex-wrap items-center justify-center gap-x-[clamp(4px,1.8vw,12px)] gap-y-[clamp(0px,1vw,8px)] text-center"
+          >
+           
+<div>
+
+            <span
+              class="[font-family:'Edwardian_Script_ITC'] font-normal text-[clamp(62px,19vw,96px)] leading-none -translate-y-[clamp(10px,3vw,18px)] text-white [color:#FFFFFF] [-webkit-text-fill-color:#fff] [-webkit-text-stroke:clamp(2px,0.7vw,3px)_#070707] [paint-order:stroke_fill]"
+            >
+              A
+            </span>
+
+            <span
+              class="font-glancyrThin text-[clamp(42px,14vw,68px)] leading-[106%]"
+            >
+              WESOME
+            </span>
+</div>
+
+            <button
+              class="btn border-none p-0 h-[clamp(64px,22vw,100px)] w-[clamp(142px,45vw,210px)] overflow-hidden text-[clamp(56px,18vw,86px)] leading-[106%]"
+            >
+              <div class="btn__bg">
+                <span class="btn__bg__layer btn__bg__layer-first"></span>
+                <span class="btn__bg__layer btn__bg__layer-second"></span>
+                <span class="btn__bg__layer btn__bg__layer-third"></span>
+              </div>
+
+              <span
+                class="btn__text-out font-baileyRegular text-white box-shadow2"
+              >
+                People
+              </span>
+              <span
+                class="btn__text-in font-baileyRegular text-white box-shadow2"
+              >
+                People
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute w-full bottom-0 z-10">
+        <div
+          class="flex text-xs sm:text-xl items-center justify-between px-6 sm:px-12 py-6 min-h-[148px]"
+        >
+          <img
+            src={reviewClutch.src}
+            alt="Reviewed on Clutch"
+            class="w-[140px] sm:w-[282px] h-auto"
+          />
+
+          <div class="flex items-center gap-2 opacity-50">
+            <img src={arrow.src} class="size-4 sm:size-6" alt="" />
+            <span class="font-glancyrRegular text-white">SCROLL</span>
+          </div>
+        </div>
+
+        <div class="h-auto px-6 sm:px-12 relative z-10">
+          <div class="bg-border-white h-[1px]"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <WorkPageComp />
+  <WorkTitleStrip />
+
+  <div class="relative w-full overflow-x-clip">
+    <!-- Green Glow Background extending behind both components -->
+    <div
+      class="absolute right-0 top-0 w-[1200px] h-[1168.24px] opacity-70 blur-[107px] rounded-[30px] pointer-events-none -z-10 -translate-x-[2%] -translate-y-[10%]"
+      style="background: radial-gradient(166.67% 50% at 50% 50%, #B3E823 0%, rgba(179, 232, 35, 0) 100%);"
+    >
+    </div>
+    <div class="hidden lg:block">
+      <CategoriesNav client:load />
+    </div>
+    <WorkEndSplitSection />
+  </div>
+
+  <div class="relative w-full overflow-x-clip bg-[#070707] pb-10">
+    <!-- Green Glow Background -->
+    <div
+      class="absolute pointer-events-none rounded-[30px] opacity-70 blur-[clamp(70px,7vw,130px)]
+         w-[clamp(1000px,110vw,2100px)] h-[clamp(900px,115vw,2400px)]
+         left-1/2 -translate-x-1/2
+         top-[clamp(1200px,82vw,1650px)]"
+      style="background: radial-gradient(166.67% 50% at 50% 50%, #B3E823 0%, rgba(179, 232, 35, 0) 100%);"
+    >
+    </div>
+
+    <!-- Components wrapped to securely sit above the glow -->
+    <div class="relative z-10">
+      <WorkInfoSections />
+      <WorkInfoBottomSection />
+      <WorkPrivacyPolicy />
+      <Footer indexPage={true} />
+    </div>
+  </div>
+</Layout>

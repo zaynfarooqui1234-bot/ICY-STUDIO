@@ -11,6 +11,9 @@ import preload from "astro-preload";
 export default defineConfig({
   output: "server",
   adapter: vercel(),
+   security: {
+    checkOrigin: false,
+  },
   integrations: [preload(), compress(), tailwind(), react(),  ],
   vite: {
     plugins: [svgr()],

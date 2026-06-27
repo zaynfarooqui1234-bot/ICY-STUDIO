@@ -20,8 +20,8 @@ const starIcon = transparent ? review_Star : star1;
 <div class={`mt-[clamp(32px,4vw,60px)] w-[clamp(250px,38vw,800px)] shrink-0 rounded-[clamp(20px,2vw,32px)] px-[clamp(20px,2.5vw,48px)] py-[clamp(20px,2.5vw,48px)] ${cardClasses}`}>
   <div class="flex items-center gap-[clamp(2px,0.4vw,8px)]">
     {Array.from({ length: 5 }).map(() => (
-      <Image
-        src={starIcon}
+      <img
+        src={starIcon.src}
         alt="Star"
         class="h-[clamp(20px,2vw,36px)] w-[clamp(20px,2vw,36px)]"
       />
